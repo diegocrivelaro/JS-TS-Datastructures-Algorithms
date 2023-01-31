@@ -11,3 +11,13 @@ console.log(numerosAntigos.copyWithin(0, 8));
 const numerosNovos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(numerosNovos.copyWithin(1, 6, 8));
 // [ 1, 7, 8, 4, 5, 6, 7, 8, 9, 10 ]
+
+// Aceita valores negativos no parâmetro de índice que vai receber os elementos
+const numeros1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numeros1.copyWithin(-3, 5, 8));
+// [1, 2, 3, 4, 5, 6, 7, 6, 7, 8];
+
+// Aceita valores negativos no parâmetro de índice inicial
+const numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numeros1.copyWithin(1, -2));
+// [1, 7, 8, 4, 5, 6, 7, 6, 7, 8];
