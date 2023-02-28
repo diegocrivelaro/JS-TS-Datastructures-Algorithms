@@ -25,5 +25,5 @@ console.log(array5.fill(50, -2));
 
 // Preencher com um valor a partir do índice negativo até o índice negativo. (Irá andar de trás para frente. Começando do índice -11, que é o primeiro índice do array, e preenchendo até o índice -4, que é o sexto índice do array)
 const array6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(array6.fill(50, -11, -4));
+console.log(array6.fill(50, -10, -4));
 // [50, 50, 50, 50, 50, 50, 7, 8, 9, 10];
