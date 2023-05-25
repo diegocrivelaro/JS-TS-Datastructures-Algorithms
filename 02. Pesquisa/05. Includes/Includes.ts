@@ -19,3 +19,5 @@ console.log(ArrayObj.filter((item) => item.name.includes("Peter"))); // [ {name:
 const obj = { name: "John", age: 20 };
 console.log(obj.name.includes("jo")); // False
 console.log(obj.name.includes("Jo")); // True
+
+console.log(array.includes(2, 3)); // False (O segundo argumento é o índice inicial de pesquisa)
