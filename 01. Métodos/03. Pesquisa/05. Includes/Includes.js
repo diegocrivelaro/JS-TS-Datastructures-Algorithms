@@ -1,3 +1,4 @@
+// @ts-check
 // Verificar se um array contém um valor
 
 const string = "casa";

@@ -1,3 +1,5 @@
+// @ts-check
+
 const names = ["Ana", "ana", "john", "John"];
 
 // Ordenação padrão (Seguindo a tabela ASCII)

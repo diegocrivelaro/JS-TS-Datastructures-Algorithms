@@ -1,3 +1,5 @@
+// @ts-check
+
 const obj = {
   0: "Diego",
   1: "Gabriel",

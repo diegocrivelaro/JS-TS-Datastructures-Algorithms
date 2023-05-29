@@ -1,3 +1,5 @@
+// @ts-check
+
 const persons = [
   { name: "John", age: 21 },
   { name: "Peter", age: 31 },

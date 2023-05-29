@@ -1,3 +1,5 @@
+// @ts-check
+
 const numbers = Object.keys(new Array(15).fill(null).map(Number));
 
 const sorted1 = numbers.sort();

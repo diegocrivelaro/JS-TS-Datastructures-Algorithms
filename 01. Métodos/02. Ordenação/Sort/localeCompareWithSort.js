@@ -1,3 +1,5 @@
+// @ts-check
+
 const wordArray = ["Maéve", "Maeve", "Ana", "ana"];
 
 console.log(wordArray.sort((a, b) => a.localeCompare(b, "pt")));

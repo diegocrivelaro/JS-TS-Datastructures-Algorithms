@@ -1,3 +1,5 @@
+// @ts-check
+
 const alunos = [
   { nome: "João", nota: 7.3, bolsista: false },
   { nome: "Diego", nota: 9.3, bolsista: false },

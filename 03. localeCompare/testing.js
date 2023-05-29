@@ -1,3 +1,5 @@
+// @ts-check
+
 const letterA = "a";
 const letterB = "b";
 
