@@ -1,13 +1,13 @@
 // @ts-check
 
-const names = ["Ana", "ana", "john", "John"];
+const names = ['Ana', 'ana', 'john', 'John'];
 
 // Ordenação padrão (Seguindo a tabela ASCII)
 console.log(names.sort());
 // [ 'Ana', 'John', 'ana', 'john' ]
 
 // Ordenação personalizada
-const lowerCaseCompareFunction = (a, b) => {
+const LowerCaseCompareFunction = (a, b) => {
   if (a.toLowerCase() < b.toLowerCase()) return -1;
 
   if (a.toLowerCase() > b.toLowerCase()) return 1;
@@ -15,5 +15,5 @@ const lowerCaseCompareFunction = (a, b) => {
   return 0;
 };
 
-console.log(names.sort(lowerCaseCompareFunction));
+console.log(names.sort(LowerCaseCompareFunction));
 // ["Ana", "ana", "John", "john"];
