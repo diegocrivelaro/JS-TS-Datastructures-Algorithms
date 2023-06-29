@@ -10,23 +10,19 @@ size -> Retorna o tamanho da pilha;
 list -> Retorna a estrutura stack;
 */
 
-class Stack {
-  #items;
-
-  #count;
-
+export default class Stack {
   constructor() {
-    this.#items = {};
-    this.#count = 0;
+    this.items = {};
+    this.count = 0;
   }
 
   isEmpty() {
-    return this.#count === 0;
+    return this.count === 0;
   }
 
   push(element) {
-    this.#items[this.#count] = element;
-    this.#count++;
+    this.items[this.count] = element;
+    this.count++;
   }
 
   pop() {
@@ -34,9 +30,9 @@ class Stack {
       return undefined;
     }
 
-    this.#count--;
-    const result = this.#items[this.#count];
-    delete this.#items[this.#count];
+    this.count--;
+    const result = this.items[this.count];
+    delete this.items[this.count];
     return result;
   }
 
@@ -45,7 +41,7 @@ class Stack {
       return undefined;
     }
 
-    return this.#items[this.#count - 1];
+    return this.items[this.count - 1];
   }
 
   clear() {
@@ -53,18 +49,18 @@ class Stack {
       return 0;
     }
 
-    this.#items = {};
-    this.#count = 0;
+    this.items = {};
+    this.count = 0;
 
     return 1;
   }
 
   size() {
-    return this.#count;
+    return this.count;
   }
 
   list() {
-    return this.#items;
+    return this.items;
   }
 }
 
