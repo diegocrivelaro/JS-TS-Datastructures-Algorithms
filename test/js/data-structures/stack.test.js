@@ -122,4 +122,25 @@ describe('Stack', () => {
   it('return empty stack if it has no elements', () => {
     expect(stack.list()).to.deep.equal({});
   });
+
+  describe('toString', () => {
+    describe('return a filled string', () => {
+      it('should return a string with the first element only', () => {
+        stack.push(1);
+
+        expect(stack.toString()).to.equal('1');
+      });
+
+      it('should return a string with the first and second element concatenated', () => {
+        stack.push(1);
+        stack.push(2);
+
+        expect(stack.toString()).to.equal('1,2');
+      });
+    });
+
+    it('return an empty string if there is no element', () => {
+      expect(stack.toString()).to.equal('');
+    });
+  });
 });
