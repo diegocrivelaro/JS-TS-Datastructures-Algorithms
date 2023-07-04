@@ -8,6 +8,7 @@ peek -> Retorna o elemento do topo da pilha, sem removê-lo;
 clear -> Limpar a pilha por completo;
 size -> Retorna o tamanho da pilha;
 list -> Retorna a estrutura stack;
+toString -> Retorna uma string com todos elementos.
 */
 
 export default class Stack {
