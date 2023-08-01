@@ -86,3 +86,9 @@ const stack = new Stack();
 
 stack.push(1);
 stack.list();
+
+// Explorando vulnerabilidade
+const getSymbol = Object.getOwnPropertySymbols(stack);
+const firstSymbol = getSymbol[0];
+stack[firstSymbol] = { 0: 'hacked' };
+stack.list();

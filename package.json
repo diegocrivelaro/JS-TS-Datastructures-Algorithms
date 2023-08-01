@@ -13,6 +13,7 @@
     "url": "https://github.com/diegocrivelaro/JS-TS-Datastructures-Algorithms/issues"
   },
   "homepage": "https://github.com/diegocrivelaro/JS-TS-Datastructures-Algorithms",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf ./dist ./coverage ./.nyc_output ./coverage.lcov ./mochawesome-report",
     "build:js": "babel src/js -d dist/js",
