@@ -1,25 +1,25 @@
 const letras = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
+  `a`,
+  `b`,
+  `c`,
+  `d`,
+  `e`,
+  `f`,
+  `g`,
+  `h`,
+  `i`,
+  `j`,
+  `k`,
+  `l`,
+  `m`,
 ];
 
 console.log(Object.values(letras));
 // ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"];
 
 const usuario = {
-  nome: "Diego",
-  sobrenome: "Ferreira",
+  nome: `Diego`,
+  sobrenome: `Ferreira`,
   idade: 25,
 };
 
