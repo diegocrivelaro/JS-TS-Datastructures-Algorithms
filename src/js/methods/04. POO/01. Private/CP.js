@@ -1,4 +1,4 @@
-class Stack {
+export class StackWithPrivateModifier {
   #items = {};
   #count = 0;
 
@@ -29,9 +29,9 @@ class Stack {
   }
 }
 
-const stack = new Stack();
-console.log(Object.getOwnPropertyNames(stack)); // []
+const stack = new StackWithPrivateModifier();
+console.log(Object.getOwnPropertyNames(StackWithPrivateModifier)); // []
 
-stack.push(1);
-stack.push(2);
-console.log(stack.peek());
+StackWithPrivateModifier.push(1);
+StackWithPrivateModifier.push(2);
+console.log(StackWithPrivateModifier.peek());
