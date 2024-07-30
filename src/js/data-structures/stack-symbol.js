@@ -11,20 +11,22 @@ list -> Retorna a estrutura stack;
 toString -> Retorna uma string com todos elementos.
 */
 
-const items = new WeakMap();
+const _items = Symbol(`StackItems`);
+const _count = Symbol(`StackCount`);
 
 export default class Stack {
   constructor() {
-    items.set(this, []);
+    this[_items] = {};
+    this[_count] = 0;
   }
 
   isEmpty() {
-    return items.get(this).length === 0;
+    return this[_count] === 0;
   }
 
   push(element) {
-    const s = items.get(this);
-    s.push(element);
+    this[_items][this[_count]] = element;
+    this[_count]++;
   }
 
   pop() {
@@ -32,8 +34,10 @@ export default class Stack {
       return undefined;
     }
 
-    const s = items.get(this);
-    return s.pop();
+    this[_count]--;
+    const result = this[_items][this[_count]];
+    delete this[_items][this[_count]];
+    return result;
   }
 
   peek() {
@@ -41,8 +45,7 @@ export default class Stack {
       return undefined;
     }
 
-    const s = items.get(this);
-    return s.at(1);
+    return this[_items][this[_count] - 1];
   }
 
   clear() {
@@ -50,36 +53,29 @@ export default class Stack {
       return 0;
     }
 
-    const s = items.get(this);
-
-    while (!this.isEmpty()) {
-      s.pop();
-    }
+    this[_items] = {};
+    this[_count] = 0;
 
     return 1;
   }
 
   size() {
-    return items.get(this).length;
+    return this[_count];
   }
 
   list() {
-    const s = items.get(this);
-
-    return s;
+    return this[_items];
   }
 
   toString() {
     if (this.isEmpty()) {
-      return '';
+      return ``;
     }
 
-    const s = items.get(this);
+    let objString = `${this[_items][0]}`;
 
-    let objString = `${s[0]}`;
-
-    for (let i = 0; i < s.length; i++) {
-      objString = `${objString}, ${s[i]}`;
+    for (let i = 1; i < this[_count]; i++) {
+      objString = `${objString},${this[_items][i]}`;
     }
 
     return objString;
@@ -89,14 +85,10 @@ export default class Stack {
 const stack = new Stack();
 
 stack.push(1);
-stack.push(2);
-console.log(stack.list());
+stack.list();
 
 // Explorando vulnerabilidade
 const getSymbol = Object.getOwnPropertySymbols(stack);
-console.log(getSymbol);
 const firstSymbol = getSymbol[0];
-console.log(firstSymbol);
-stack[firstSymbol] = ['hacked'];
+stack[firstSymbol] = { 0: `hacked` };
 stack.list();
-console.log(stack.list());
