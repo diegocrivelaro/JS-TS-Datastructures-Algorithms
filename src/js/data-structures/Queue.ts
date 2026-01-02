@@ -2,7 +2,7 @@
 1. Enqueue: Adiciona um novo elemento ao final da fila.
 2. Dequeue: Remove o primeiro elemento da fila e retorna esse elemento.
 3. Peek: Retorna o primeiro elemento da fila sem removê-lo.
-4. IsEmpty: Retorna "true" se a fila não estiver vazia e "false" caso contrário.
+4. IsEmpty: Retorna "true" se a fila estiver vazia e "false" caso contrário.
 5. Size: Retorna o tamanho da fila.
 6. Clear: Remove todos os elementos da fila.
 7. ToString: Retorna uma representação em string da fila.
@@ -46,7 +46,7 @@ export default class Queue<T> {
     return this.items[this.lowestCount];
   }
 
-  // Retorna "true" se a fila não estiver vazia e "false" caso contrário
+  // Retorna "true" se a fila estiver vazia e "false" caso contrário
   isEmpty(): boolean {
     return this.count - this.lowestCount === 0;
   }
