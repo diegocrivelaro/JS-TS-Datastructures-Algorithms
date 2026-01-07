@@ -199,13 +199,3 @@ export default class Deque<T> {
     return objString;
   }
 }
-
-const deque = new Deque<string>();
-deque.addBack("B");
-deque.addBack("C");
-deque.addFront("A");
-console.log(deque.toString());
-deque.removeFront();
-console.log(deque.toString());
-deque.addFront("A1");
-console.log(deque.toString());
